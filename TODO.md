@@ -1,8 +1,12 @@
 TODOs
 
 
-- [] Build web app
-- [] Connect to muse headset
-- [] Read data
-- [] Bundle as chrome extension
-- [] Add build step to package js into single script for chrome extension
+- [x] Build web app
+- [x] Connect to muse headset
+- [x] Read data
+- [x] Bundle as chrome extension
+- [x] Add build step to package js into single script for chrome extension
+- [x] Transform data with fft
+- [] visualise data
+- [] settings to choose wave band
+- [] set threshold for submitting form

@@ -14,8 +14,9 @@
   },
   "content_scripts": [
    {
-     "matches": ["https://github.com/*/*/pull/*"],
-     "js": ["app.bundle.js"]
+     "matches": ["https://github.com/*"],
+     "js": ["app.bundle.js"],
+     "css": ["style.css"]
    }
  ]
 }

@@ -1,40 +1,47 @@
-import { MuseClient } from "muse-js";
+import { zipSamples, channelNames, MuseClient } from "muse-js";
 import { EEGReading } from "muse-js/dist/lib/muse-interfaces.d.ts";
-
+import { removeChannels, powerByBand, epoch, fft } from "@neurosity/pipes";
 
 let client: MuseClient = new MuseClient();
 
-function connectButton() {
-  let button = document.createElement("button");
-  button.textContent = "Connect";
+function connectToolbar() {
+  let container = document.createElement("div");
+  container.id = ("muse-toolbar")
+
+  let button = document.createElement("button")
+  button.textContent = "Enable mind control!";
+  button.classList.add("btn", "btn-sm", "btn-primary", "float-left", "mr-1")
+  button.type = "submit"
   button.addEventListener("click", connect);
 
-  return button;
-}
+  container.appendChild(button)
 
-function pauseButton() {
-  let button = document.createElement("button");
-  button.textContent = "Pause";
-  button.addEventListener("click", pause);
-
-  return button;
+  return container;
 }
 
 
 async function connect () {
   await client.connect();
   await client.start();
+  hideToolbar();
   stream();
 }
 
-async function pause () {
-  await client.pause();
+function hideToolbar() {
+  const toolbar = document.getElementById("muse-toolbar")
+  toolbar.classList.add("hidden");
 }
 
 function stream () {
-  client.eegReadings
+  zipSamples(client.eegReadings)
+    .pipe(
+      epoch({ duration: 1024, interval: 100, samplingRate: 256 }),
+      fft({ bins: 256 }),
+      powerByBand()
+    )
     .subscribe( (eeg: EEGReading) => { console.log(eeg) });
 }
 
-document.body.appendChild(connectButton());
-document.body.appendChild(pauseButton());
+let reviewForm = document.querySelector("#submit-review div.form-actions")
+
+document.body.appendChild(connectToolbar());

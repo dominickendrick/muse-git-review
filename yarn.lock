@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@neurosity/pipes@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@neurosity/pipes/-/pipes-3.2.3.tgz#acc71f9f965c5ba96dd1ba9d1ca9785924217b5e"
+  dependencies:
+    dsp.js "^1.0.1"
+    fili "^2.0.1"
+    rxjs "^6.3.1"
+
 "@reactivex/rxjs@^6.3.3":
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/@reactivex/rxjs/-/rxjs-6.3.3.tgz#f79527359e6ce2bb310cb3d61a16c634d25042aa"
@@ -1021,6 +1029,10 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dsp.js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dsp.js/-/dsp.js-1.0.1.tgz#02554a223ee514cd0e226cb6fb88d6d0b3e91308"
+
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/duplexify/-/duplexify-3.6.1.tgz#b1a7a29c4abfd639585efaecce80d666b1e34125"
@@ -1284,6 +1296,10 @@ faye-websocket@~0.11.1:
   dependencies:
     websocket-driver ">=0.5.1"
 
+fft@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/fft/-/fft-0.2.1.tgz#1044554fdba1a0b96c4843d5dea8525cab3621aa"
+
 figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
@@ -1293,6 +1309,10 @@ figures@^2.0.0:
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
   dependencies:
     escape-string-regexp "^1.0.5"
+
+fili@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/fili/-/fili-2.0.3.tgz#a2a62dd77f1f2b98e9afff173d24167f4221a83d"
 
 fill-range@^4.0.0:
   version "4.0.0"
@@ -2947,7 +2967,7 @@ rxjs-compat@^6.3.3:
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.3.3.tgz#2ab3b9ac0dac0c073749d55fef9c03ea1df2045c"
 
-"rxjs@^6.0.0 || ^5.6.0-forward-compat.4", rxjs@^6.3.3:
+"rxjs@^6.0.0 || ^5.6.0-forward-compat.4", rxjs@^6.3.1, rxjs@^6.3.3:
   version "6.3.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
   dependencies:
