@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --open"
   },
   "devDependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.19"
   },
   "dependencies": {
     "@babel/core": "^7.7.4",
